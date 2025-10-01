@@ -1,0 +1,117 @@
+/* base */
+body {
+    background-color: #f3f4f6; /* bg-gray-100 */
+    color: #1f2937; /* text-gray-800 */
+    font-family: 'Open Sans', sans-serif;
+}
+
+/* headings */
+h1 {
+    font-size: 1.5rem; /* text-2xl */
+    font-weight: 700; /* font-bold */
+    color: #ef4444; /* text-red-500 */
+}
+
+h2 {
+    font-size: 1.25rem; /* text-xl */
+    font-weight: 700;
+    margin-top: 1rem;
+    margin-bottom: 1rem; /* my-4 */
+}
+
+h3 {
+    font-size: 1.125rem; /* text-lg */
+    font-weight: 700;
+    margin-top: 1rem;
+    margin-bottom: 1rem; /* my-4 */
+}
+
+ul {
+    margin-top: 2.5rem;
+    margin-bottom: 2.5rem; /* my-10 */
+}
+
+p {
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem; /* my-2 */
+}
+
+/* header */
+header {
+    background-color: #ffffff; /* bg-white */
+}
+
+header nav {
+    display: flex;
+    align-items: center;
+    gap: 1.25rem; /* gap-5 */
+    max-width: 1024px; /* max-w-screen-lg */
+    padding: 1rem 3rem; /* py-4 px-12 */
+    margin: 0 auto;
+}
+
+header h1 {
+    margin-right: auto;
+}
+
+header a {
+    text-decoration: none;
+    color: #1f2937; /* text-gray-800 */
+    font-weight: 600; /* font-semibold */
+}
+
+/* form elements */
+form {
+    max-width: 640px; /* max-w-screen-sm */
+}
+
+input, select, textarea {
+    display: block;
+    width: 100%;
+    margin-top: 0.5rem;
+    margin-bottom: 1rem;
+    padding: 0.5rem; /* p-2 */
+}
+
+ul {
+    list-style-type: none;
+    padding-left: 1.5rem; /* pl-6 */
+}
+
+/* custom classes */
+.container {
+    max-width: 1024px; /* max-w-screen-lg */
+    margin-left: auto;
+    margin-right: auto;
+    padding: 2rem 3rem; /* py-8 px-12 */
+}
+
+.card {
+    background-color: #ffffff; /* bg-white */
+    border-radius: 0.25rem; /* rounded */
+    border: 1px solid #e5e7eb; /* border-gray-200 */
+    padding: 0.75rem; /* px-3 py-3 */
+    margin: 0.5rem 0; /* my-2 */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.highlight {
+    border-left: 4px solid #ef4444; /* border-l-4 border-l-red-500 */
+}
+
+.btn {
+    border-radius: 0.25rem; /* rounded */
+    padding: 0.5rem 0.75rem; /* px-3 py-2 */
+    background-color: #e5e7eb; /* bg-gray-200 */
+    color: inherit;
+    text-decoration: none;
+    display: inline-block;
+    transition: all 0.2s ease;
+}
+
+.btn:hover {
+    background-color: #ef4444; /* hover:bg-red-500 */
+    color: #ffffff; /* hover:text-white */
+}
