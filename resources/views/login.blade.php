@@ -1,16 +1,23 @@
 <x-layout>
     <div class="container align-middle">
-    <h1>Login page here</h1>
-    <form action="/Login" method="POST" id="login-form">
-  <div class="mb-3">
-    <label for="InputUsername" class="form-label">Username</label>
-    <input type="username" class="form-control" id="username">
-  </div>
-  <div class="mb-3">
-    <label for="InputPassword" class="form-label">Password</label>
-    <input type="password" class="form-control" id="exampleInputPassword1">
-  </div>
-  <button type="submit" class="btn btn-primary">Submit</button>
-</form>
+        <h1>Login</h1>
+        <form action="{{ route('login.store') }}" method="POST">
+            @csrf
+            <div class="mb-3">
+                <label for="username" class="form-label">Username</label>
+                <input type="text" class="form-control" id="username" name="username" required>
+                @error('username')
+                    <span class="text-danger">{{ $message }}</span>
+                @enderror
+            </div>
+            <div class="mb-3">
+                <label for="password" class="form-label">Password</label>
+                <input type="password" class="form-control" id="password" name="password" required>
+                @error('password')
+                    <span class="text-danger">{{ $message }}</span>
+                @enderror
+            </div>
+            <button type="submit" class="btn btn-primary">Login</button>
+        </form>
     </div>
 </x-layout>

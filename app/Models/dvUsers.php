@@ -2,10 +2,12 @@
 
 namespace App\Models;
 
+use Illuminate\Container\Attributes\Auth;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Foundation\Auth\User as Authenticatable;
 
-class dvUsers extends Model
+class dvUsers extends Authenticatable
 {
     protected $fillable = ['name', 'username', 'email', 'password'];
     /** @use HasFactory<\Database\Factories\DvUsersFactory> */

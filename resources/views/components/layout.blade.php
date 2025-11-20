@@ -5,7 +5,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Laravel assesment</title>
-    {{-- <link rel="stylesheet" href="{{ asset('css/custom.css') }}"> --}}
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
 </head>
@@ -17,14 +16,31 @@
         <nav class="navbar navbar-expand-lg bg-body-tertiary">
             <div class="container-fluid justify-content-md-evenly">
                 <a class="btn btn-outline-success me-2" href="/">PHP Developer</a>
-                <a class="btn btn-sm btn-outline-secondary" href="{{ Route('users.index') }}">Όλοι οι χρήστες</a>
-                <a class="btn btn-sm btn-outline-secondary" href="{{ Route('users.create') }}">Δημιουργία χρήστη</a>
+                @if (Auth::check())
+                    <a class="btn btn-sm btn-outline-secondary" href="{{ Route('users.index') }}">Όλοι οι χρήστες</a>
+                @else
+                    <a class="btn btn-sm btn-outline-secondary disabled" href="#">Όλοι οι χρήστες</a>
+                @endif
+                @if (Auth::check())
+                    <a class="btn btn-sm btn-outline-secondary" href="{{ Route('users.create') }}">Δημιουργία χρήστη</a>
+                @else
+                    <a class="btn btn-sm btn-outline-secondary disabled" href="#">Δημιουργία χρήστη</a>
+                @endif
+
+                @if (Auth::check())
+                    <form action="{{ route('logout') }}" method="POST" class="d-inline">
+                        @csrf
+                        <button type="submit" class="btn btn-outline-danger btn-sm">Logout</button>
+                    </form>
+                @else
+                    <a href="{{ route('login.show') }}" class="btn btn-outline-primary btn-sm">Login</a>
+                @endif
             </div>
         </nav>
     </header>
     <div class="d-flex justify-content-center align-items-center full-heigh flex-grow-1">
         <main class="container">
-                {{ $slot }}
+            {{ $slot }}
         </main>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"

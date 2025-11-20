@@ -63,3 +63,4 @@ CREATE TABLE `migrations` (
 
 INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES (1,'2025_09_24_180200_create_dv_users_roles_table',1);
 INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES (2,'2025_09_24_180419_create_dv_users_table',1);
+INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES (3,'2025_09_24_180631_create_dv_user_role_table',1);

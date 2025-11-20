@@ -26,3 +26,7 @@ Thumbs.db
 composer.lock
 npm-debug.log
 yarn-error.log
+docker-compose.yaml
+dockerfile
+/nginx/conf.d
+start.sh

@@ -14,17 +14,17 @@
 
 <body class="bg-light text-dark font-sans text-center px-8 py-12 min-vh-100 d-flex flex-column">
 
-    <header class="bg-white" >
-    <nav>
-      
-    </nav>
+    <header class="bg-white">
+        <nav>
+
+        </nav>
     </header>
     <div class="flex-grow-1 justify-content-center align-items-center full-height">
         <main class="container">
 
             <h1 class="h1 display-5 fw-bold text-danger">Welcome to my Laravel assesment</h1>
             <p class="my-2">You have to be Logged in to continue...</p>
-            <a href="/users" class="btn btn-primary">Login</a>
+            <a href="/login" class="btn btn-primary">Login</a>
 
         </main>
     </div>
@@ -36,4 +36,5 @@
         </small>
     </div>
 </footer>
+
 </html>

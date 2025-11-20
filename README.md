@@ -12,6 +12,6 @@
 3. `npm install && npm run build`
 4. Copy `.env.example` to `.env` and change DB data
 5. Make a new database with name `phpdev`
-6. Make the migration to build the tables and fill them with data `php artisan migration --seed`
 6. `php artisan key:generate`
-7. `php artisan serve`
+7. Make the migration to build the tables and fill them with data `php artisan migration --seed`
+8. `php artisan serve`
