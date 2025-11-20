@@ -4,6 +4,7 @@
 .env
 .env.backup
 .env.production
+.env.old
 .phpactor.json
 .phpunit.result.cache
 /.fleet
@@ -27,8 +28,7 @@ Thumbs.db
 composer.lock
 npm-debug.log
 yarn-error.log
-docker-compose.yml
 dockerfile
 /nginx
 start.sh
-bak.env.old
+docker-compose.yml
