@@ -1,3 +1,4 @@
+.gitignore
 *.log
 .DS_Store
 .env
@@ -26,7 +27,8 @@ Thumbs.db
 composer.lock
 npm-debug.log
 yarn-error.log
-docker-compose.yaml
+docker-compose.yml
 dockerfile
-/nginx/conf.d
+/nginx
 start.sh
+bak.env.old
